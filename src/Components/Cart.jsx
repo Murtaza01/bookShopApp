@@ -64,7 +64,7 @@ const Cart = forwardRef(({ closeCart }, ref) => {
         ref={dialog}
         className="relative backdrop:backdrop-blur-sm"
       >
-        <div className="center2  fixed min-h-[40%] w-[90%] rounded-sm border-none  bg-white p-2 pb-10 shadow-md outline-none xs:w-96  ">
+        <div className="center2  fixed min-h-[40%] w-[90%] rounded-sm border-none  bg-white p-2 pb-12 shadow-md shadow-black/40 outline-none xs:w-96  ">
           <h3 className="secondaryFont mb-3 text-2xl font-semibold">
             Your Cart
           </h3>
@@ -95,8 +95,8 @@ const Cart = forwardRef(({ closeCart }, ref) => {
             )}
           </div>
 
-          <div className="absolute bottom-[1%] flex w-[97%] justify-between px-1 xs:px-0   ">
-            <h4 className="faqFont  text-lg xs:text-[21px] ">
+          <div className=" absolute bottom-[1%] flex w-[97%] justify-between px-1  pb-1 ">
+            <h4 className="faqFont   text-xl ">
               Total Price :{" "}
               <span className="secondaryFont  text-[#119735]">
                 {totalPrice}$
@@ -111,7 +111,7 @@ const Cart = forwardRef(({ closeCart }, ref) => {
           </div>
 
           <button
-            className={`absolute right-0 top-0 rounded-sm bg-[#00A9FF] text-xl text-white shadow-md  xs:text-2xl`}
+            className={`absolute right-0 top-0 rounded-sm bg-[#00A9FF] text-2xl text-white shadow-md  xs:text-2xl`}
             onClick={closeCart}
           >
             <FaXmark />

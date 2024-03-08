@@ -54,7 +54,7 @@ export default function BooksContainer() {
         >
           <input
             type="text"
-            className="headingFont w-20 bg-transparent px-1 text-lg outline-none xs:w-40"
+            className="headingFont  w-28 bg-transparent px-1 text-lg outline-none xs:w-40"
             placeholder="Search"
             value={searchedBook}
             onChange={searchBook}
@@ -65,7 +65,7 @@ export default function BooksContainer() {
         <div className="headingFont  xs:text-lg ">
           <select
             name="Sort by Genre "
-            className="h-8 rounded-sm  shadow-md outline-none xs:px-1  "
+            className="h-8 rounded-sm  shadow-md outline-none xs:px-2  "
             onChange={sortBooks}
           >
             <option value="all books">Sort By</option>
@@ -82,7 +82,7 @@ export default function BooksContainer() {
           .filter((item) => {
             const name = item.name.toLowerCase();
             const value = searchedBook.toLowerCase();
-            return name.startsWith(searchedBook);
+            return name.startsWith(value);
           })
           .slice(0, shownBooks)
           .map(

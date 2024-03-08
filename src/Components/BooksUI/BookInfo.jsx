@@ -55,8 +55,8 @@ const BookInfo = forwardRef(
         ref={dialog}
         className=" relative backdrop:backdrop-blur-sm"
       >
-        <div className="center2 fixed h-[80vh]  min-w-[85%]  overflow-hidden rounded-sm bg-white px-1  outline-none    ">
-          <div className="relative mx-auto h-[96%]  w-[98%] ">
+        <div className="center2 fixed h-[80vh]  min-w-[85%] overflow-hidden rounded-sm bg-white px-1 shadow-lg shadow-black/40  outline-none    ">
+          <div className="relative mx-auto h-[96%] w-[98%]  space-y-5 ">
             <figure
               className={`mx-auto my-1  w-[35%] max-w-[180px] shadow-md shadow-black sm:mb-3  sm:max-w-[250px]  ${language ? "sm:float-right" : "sm:float-left"} `}
             >

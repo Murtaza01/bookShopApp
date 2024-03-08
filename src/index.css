@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&family=Cormorant+Upright&family=Courier+Prime&family=Montserrat&family=Noto+Serif&family=Mate+SC&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* accent color #00A9FF */
+/* secondary accent color #119735 */
+/* faq color #ffffff90 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  @apply secondaryFont rounded-md bg-[#000] px-2  py-1  text-white;
+}
+
+.availableButton {
+  @apply rounded-md  px-3 py-1;
+}
+.notAvailable {
+  @apply bg-gradient-to-br from-red-500;
+}
+.available {
+  @apply bg-gradient-to-br from-green-500;
+}
+.cardSM {
+  @apply sm:min-h-[450px] sm:w-60 sm:flex-col  sm:items-center sm:border-none;
+}
+
+@layer components {
+  .headingFont {
+    font-family: "Noto Serif", serif;
+  }
+  .primaryFont {
+    font-family: "Courier Prime", sans-serif;
+  }
+  .secondaryFont {
+    font-family: "Mate SC", sans-serif;
+  }
+
+  .faqFont {
+    font-family: "Cormorant Upright", serif;
+  }
+
+  .paragraphFont {
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .normalFont {
+    font-family: "Cairo", sans-serif;
+  }
+
+  .mainBg {
+    background: rgb(142, 158, 171);
+    background: radial-gradient(circle, #8e9eabe4 30%, #eef2f3 90%);
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .center2 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .gradientLetter {
+    background: linear-gradient(to bottom right, #00a9ff, #9b92ff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

@@ -55,45 +55,57 @@ const BookInfo = forwardRef(
         ref={dialog}
         className=" relative backdrop:backdrop-blur-sm"
       >
-        <div className="center2 fixed h-[80vh]  min-w-[85%] overflow-hidden rounded-sm bg-white px-1 shadow-lg shadow-black/40  outline-none    ">
-          <div className="relative mx-auto h-[96%] w-[98%]  space-y-5 ">
-            <figure
-              className={`mx-auto my-1  w-[35%] max-w-[180px] shadow-md shadow-black sm:mb-3  sm:max-w-[250px]  ${language ? "sm:float-right" : "sm:float-left"} `}
-            >
-              <img src={image} alt="" className="" />
-            </figure>
+        <div className="center2 fixed min-h-[80%] min-w-[87%]  overflow-hidden rounded-sm  bg-white px-1  pb-12 shadow-lg shadow-black/40  outline-none    ">
+          <div className="h-[95%]   ">
+            <div className="relative  mx-auto h-[96%] w-[98%]  space-y-3 ">
+              <figure
+                className={`mx-auto my-1 w-[40%]  max-w-[180px] sm:mb-3  sm:max-w-[250px]  ${language ? "sm:float-right" : "sm:float-left"} `}
+              >
+                <img
+                  src={image}
+                  alt=""
+                  className="rounded-md shadow-md shadow-black "
+                />
+              </figure>
 
-            <div className="flex flex-col sm:mt-3 sm:space-y-2 sm:p-2 sm:text-lg">
-              <p>{description}</p>
-              <p className=" font-semibold">
-                {language ? "سنة النشر:" : "Publish year:"}
-                <span className="ml-2 font-normal">{year}</span>
-              </p>
-              <p className=" font-semibold">
-                {language ? "قام بلرفع:" : "Uploaded By:"}
-                <span className="ml-2 font-normal">{user}</span>
-              </p>
-              <span className="font-semibold capitalize">
-                {language
-                  ? "تواصل مع المستخدم للحصول على الكتاب: "
-                  : "Contact the User to get the book: "}
-                <button onClick={copyClipBoard}>
-                  <MdOutlineMail className="inline text-2xl text-[#00A9FF]" />
-                </button>
-              </span>
+              <div className="flex flex-col gap-2 sm:mt-3 sm:space-y-2 sm:p-2 sm:text-lg">
+                <p>{description}</p>
+                <p className=" font-semibold">
+                  {language ? "سنة النشر:" : "Publish year:"}
+                  <span className="ml-2 font-normal">{year}</span>
+                </p>
+                <p className=" font-semibold">
+                  {language ? "قام بلرفع:" : "Uploaded By:"}
+                  <span className="ml-2 font-normal">{user}</span>
+                </p>
+                <span className="font-semibold capitalize">
+                  {language
+                    ? "تواصل مع المستخدم للحصول على الكتاب: "
+                    : "Contact the User to get the book: "}
+
+                  <button
+                    disabled={!email}
+                    onClick={copyClipBoard}
+                    className="text-[#00A9FF] disabled:cursor-not-allowed disabled:text-red-500"
+                  >
+                    <MdOutlineMail className="inline text-2xl" />
+                  </button>
+                </span>
+              </div>
             </div>
-            <div className="secondaryFont absolute bottom-2 flex w-full justify-center gap-5 text-lg   ">
-              <span
-                className={`availableButton ${exchangeable ? "available " : "notAvailable"} `}
-              >
-                {language ? "استبدال" : "Exchangeable"}
-              </span>
-              <span
-                className={`availableButton ${lendable ? "available " : "notAvailable"}`}
-              >
-                {language ? "اعارة" : "Lendable"}
-              </span>
-            </div>
+          </div>
+
+          <div className="secondaryFont absolute bottom-2 flex w-full justify-center gap-5 text-lg   ">
+            <span
+              className={`availableButton ${exchangeable ? "available " : "notAvailable"} `}
+            >
+              {language ? "استبدال" : "Exchangeable"}
+            </span>
+            <span
+              className={`availableButton ${lendable ? "available " : "notAvailable"}`}
+            >
+              {language ? "اعارة" : "Lendable"}
+            </span>
           </div>
           <button
             className={`absolute ${language ? "left-0 top-0" : "right-0 top-0"}   bg-[#00A9FF] text-2xl text-white shadow-md  xs:text-3xl`}

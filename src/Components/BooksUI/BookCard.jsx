@@ -34,15 +34,15 @@ export default function BookCard({
   return (
     <div
       dir={language ? "rtl" : "ltr"}
-      className="cardSM  relative flex h-max w-full overflow-hidden border-b-2 border-black pb-2 md:w-72"
+      className="cardSM relative flex h-max w-full overflow-hidden  border-b-2 border-black pb-2 md:w-72"
     >
       <div className=" sm:center  w-[35%]  sm:w-full">
-        <img src={image} alt="" className="h-full sm:h-64 md:h-72 " />
+        <img src={image} alt="" className="h-full rounded-md sm:h-64 md:h-72" />
       </div>
       <div
-        className={` w-[75%]  space-y-0   ${language ? "pr-2" : "pl-2"}   xs:space-y-2 xs:py-2 sm:grid sm:w-full sm:place-items-center sm:gap-y-1 sm:space-y-0  sm:pl-0  `}
+        className={` w-[75%]  space-y-0 min-[375px]:space-y-1  ${language ? "pr-2" : "pl-2"}   xs:space-y-2 xs:py-2 sm:grid sm:w-full sm:place-items-center sm:gap-y-1 sm:space-y-0  sm:pl-0  `}
       >
-        <div className="col-span-2  flex items-center justify-between  capitalize sm:gap-2">
+        <div className="col-span-2 flex items-center justify-between capitalize   sm:gap-2">
           <h3 className="headingFont  text-xl font-semibold ">{name}</h3>
           <span className="text-2xl text-[#119735]">{price}$</span>
         </div>

@@ -29,6 +29,12 @@ const faqData = [
     question: "why the only way of contact is through email?",
     answer: "for privacy !",
   },
+  {
+    id: id(),
+    question: "why some emails are red?",
+    answer:
+      "that means the user didn't provide an email and there is no other way of contacting him",
+  },
 
   {
     id: id(),

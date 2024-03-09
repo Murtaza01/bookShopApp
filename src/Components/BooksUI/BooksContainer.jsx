@@ -17,7 +17,6 @@ export default function BooksContainer() {
 
   function showMore() {
     setShownBooks((prev) => prev + 5);
-    console.log(booksData.length);
   }
   function sortBooks(e) {
     const genre = e.target.value;
@@ -54,7 +53,7 @@ export default function BooksContainer() {
         >
           <input
             type="text"
-            className="headingFont  w-28 bg-transparent px-1 text-lg outline-none xs:w-40"
+            className="headingFont  w-28 bg-transparent px-1 text-lg outline-none xs:w-32 sm:w-40 "
             placeholder="Search"
             value={searchedBook}
             onChange={searchBook}
@@ -65,7 +64,7 @@ export default function BooksContainer() {
         <div className="headingFont  xs:text-lg ">
           <select
             name="Sort by Genre "
-            className="h-8 rounded-sm  shadow-md outline-none xs:px-2  "
+            className="h-8 rounded-sm px-1 shadow-md outline-none xs:px-2  "
             onChange={sortBooks}
           >
             <option value="all books">Sort By</option>

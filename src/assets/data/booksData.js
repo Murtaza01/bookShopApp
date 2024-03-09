@@ -47,21 +47,7 @@ const booksData = [
     lendable: false,
     exchangeable: true,
   },
-  {
-    id: id(),
-    name: "the last days of socrates",
-    user: "Murtaza",
-    email: "Murtaza.alkabie@gmail.com",
-    price: 4,
-    year: "181",
-    author: "Plato",
-    genre: "philosophy",
-    image: the_last_days_of_socrates,
-    description:
-      "The trial and death of Socrates (469-399 BCE) have almost as central a place in Western consciousness as the trial and death of Jesus. In four superb dialogues, Plato provides the classic account. Euthyphro finds Socrates outside the court-house",
-    lendable: false,
-    exchangeable: true,
-  },
+
   {
     id: id(),
     name: "The Adventures of Tom Sawyer",
@@ -89,6 +75,21 @@ const booksData = [
     image: the_odyssey,
     description:
       "The Odyssey is one of two major ancient Greek epic poems attributed to Homer. It is one of the oldest extant works of literature still widely read by modern audiences. As with the Iliad, the poem is divided into 24 books. It follows the Greek hero Odysseus, king of Ithaca, and his journey home after the Trojan War",
+    lendable: true,
+    exchangeable: true,
+  },
+  {
+    id: id(),
+    name: "the social contract",
+    user: "Murtaza",
+    email: "",
+    price: 4,
+    year: "1762",
+    author: "Jean-Jacques Rousseau",
+    genre: "philosophy",
+    image: the_social_contract,
+    description:
+      "Man is born free; and everywhere he is in chains...These are the famous opening words of a treatise that has not ceased to stir vigorous debate since its first publication in 1762. Rejecting the view that anyone has a natural right to wield authority over others, Rousseau argues instead for a pact",
     lendable: true,
     exchangeable: true,
   },
@@ -176,11 +177,26 @@ const booksData = [
     price: 2,
     year: "1908",
     author: "Edward B. Titchener",
-    genre: "fiction",
+    genre: "psychology",
     image: the_psychology_of_feelings,
     description:
       "Excerpt from Lectures on the Elementary Psychology of Feeling and Attention I have not been able, either in the lectures themselves or in the appended notes, to take account of all that is important in the current psychology of feeling and attention. Indeed, my sins of omission are Obvious",
     lendable: true,
+    exchangeable: true,
+  },
+  {
+    id: id(),
+    name: "the last days of socrates",
+    user: "Murtaza",
+    email: "Murtaza.alkabie@gmail.com",
+    price: 4,
+    year: "181",
+    author: "Plato",
+    genre: "philosophy",
+    image: the_last_days_of_socrates,
+    description:
+      "The trial and death of Socrates (469-399 BCE) have almost as central a place in Western consciousness as the trial and death of Jesus. In four superb dialogues, Plato provides the classic account. Euthyphro finds Socrates outside the court-house",
+    lendable: false,
     exchangeable: true,
   },
   {
@@ -191,7 +207,7 @@ const booksData = [
     price: 1,
     year: "1962",
     author: "Hans Jürgen Eysenck",
-    genre: "",
+    genre: "psychology",
     image: know_your_iq,
     description:
       "intelligence quotient, as a useful means of measuring brain capacity, has come increasingly into the public eye in recent years. This famous book (and its sequel Check Your Own IQ) enables the reader to estimate and confirm his/her own IQ rating.",
@@ -213,21 +229,7 @@ const booksData = [
     lendable: true,
     exchangeable: true,
   },
-  {
-    id: id(),
-    name: "the social contract",
-    user: "Murtaza",
-    email: "",
-    price: 4,
-    year: "1762",
-    author: "Jean-Jacques Rousseau",
-    genre: "philosophy",
-    image: the_social_contract,
-    description:
-      "Man is born free; and everywhere he is in chains...These are the famous opening words of a treatise that has not ceased to stir vigorous debate since its first publication in 1762. Rejecting the view that anyone has a natural right to wield authority over others, Rousseau argues instead for a pact",
-    lendable: true,
-    exchangeable: true,
-  },
+
   {
     id: id(),
     name: "Little Women",

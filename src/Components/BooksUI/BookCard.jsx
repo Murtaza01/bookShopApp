@@ -75,7 +75,7 @@ export default function BookCard({
 
       <button
         onClick={addToCart}
-        className={`button  absolute bottom-[3%] ${language ? "left-[0.2%]" : "right-[0.2%]"} sm:static sm:mx-auto sm:w-[60%]`}
+        className={`button activeButton absolute bottom-[3%]    ${language ? "left-[0.2%]" : "right-[0.2%]"} sm:static sm:mx-auto sm:w-[60%]`}
       >
         Add to Cart
       </button>

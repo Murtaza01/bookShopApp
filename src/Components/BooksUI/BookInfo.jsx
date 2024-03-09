@@ -25,16 +25,19 @@ const BookInfo = forwardRef(
     ref,
   ) => {
     const [notify, setNotify] = useState(false);
+    const [animation, setAnimation] = useState(false);
     const dialog = useRef();
 
     useImperativeHandle(ref, () => {
       return {
         open() {
           dialog.current.showModal();
+          setAnimation((prev) => !prev);
           document.querySelector("body").style.overflowY = "hidden";
         },
         close() {
           dialog.current.close();
+          setAnimation((prev) => !prev);
           document.querySelector("body").style.overflowY = "scroll";
         },
       };
@@ -53,9 +56,11 @@ const BookInfo = forwardRef(
         onKeyDown={(e) => e.key === "Escape" && e.preventDefault()}
         dir={language ? "rtl" : "ltr"}
         ref={dialog}
-        className=" relative backdrop:backdrop-blur-sm"
+        className="relative backdrop:backdrop-blur-sm"
       >
-        <div className="center2 fixed min-h-[80%] min-w-[87%]  overflow-hidden rounded-sm  bg-white px-1  pb-12 shadow-lg shadow-black/40  outline-none    ">
+        <div
+          className={`center2 dialog ${animation ? "open" : ""} fixed min-h-[80%] min-w-[87%]  overflow-hidden rounded-sm  bg-white  pb-12 shadow-lg shadow-black/40  outline-none    `}
+        >
           <div className="h-[95%]   ">
             <div className="relative  mx-auto h-[96%] w-[98%]  space-y-3 ">
               <figure
@@ -86,7 +91,7 @@ const BookInfo = forwardRef(
                   <button
                     disabled={!email}
                     onClick={copyClipBoard}
-                    className="text-[#00A9FF] disabled:cursor-not-allowed disabled:text-red-500"
+                    className="activeButton text-[#00A9FF] disabled:cursor-not-allowed disabled:text-red-500"
                   >
                     <MdOutlineMail className="inline text-2xl" />
                   </button>

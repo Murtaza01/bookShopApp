@@ -30,6 +30,12 @@
   @apply sm:min-h-[450px] sm:w-60 sm:flex-col  sm:items-center sm:border-none;
 }
 
+.activeButton {
+  @apply transition-all duration-200 active:scale-[0.95];
+}
+
+/*  */
+
 @layer components {
   .headingFont {
     font-family: "Noto Serif", serif;
@@ -74,5 +80,24 @@
     background: linear-gradient(to bottom right, #00a9ff, #9b92ff);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+.dialog.open {
+  opacity: 1;
+  /* scale: 1; */
+}
+/* adding a transtion to our dialog */
+.dialog {
+  opacity: 0;
+  /* scale: 0;
+  transform-origin: left top; */
+  transition: opacity 600ms ease;
+}
+
+@starting-style {
+  .dialog.open {
+    opacity: 0;
+    /* scale: 0; */
   }
 }

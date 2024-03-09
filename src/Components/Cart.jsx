@@ -20,13 +20,12 @@ let i = 0;
 
 const Cart = forwardRef(({ closeCart }, ref) => {
   const [notify, setNotify] = useState(false);
+  const [animation, setAnimation] = useState(false);
   const [message, setMessage] = useState();
   const dialog = useRef();
   const { items, setItems, totalPrice, setTotalPrice } = useContext(context);
 
   function ShowMessage() {
-    console.log(items);
-
     const shownMessage = messages[i];
     setMessage(shownMessage);
     i++;
@@ -48,10 +47,13 @@ const Cart = forwardRef(({ closeCart }, ref) => {
     return {
       close() {
         dialog.current.close();
+        setAnimation((prev) => !prev);
         document.querySelector("body").style.overflowY = "scroll";
       },
       open() {
         dialog.current.showModal();
+        setAnimation((prev) => !prev);
+
         document.querySelector("body").style.overflowY = "hidden";
       },
     };
@@ -64,7 +66,9 @@ const Cart = forwardRef(({ closeCart }, ref) => {
         ref={dialog}
         className="relative backdrop:backdrop-blur-sm"
       >
-        <div className="center2  fixed min-h-[40%] w-[90%] rounded-sm border-none  bg-white p-2 pb-12 shadow-md shadow-black/40 outline-none xs:w-96  ">
+        <div
+          className={`center2 dialog ${animation ? "open" : ""} fixed min-h-[40%] w-[90%] rounded-sm border-none  bg-white p-2 pb-12 shadow-md shadow-black/40 outline-none xs:w-96  `}
+        >
           <h3 className="secondaryFont mb-3 text-2xl font-semibold">
             Your Cart
           </h3>
@@ -83,7 +87,7 @@ const Cart = forwardRef(({ closeCart }, ref) => {
                     </p>
 
                     <button onClick={() => removeItem(index, price)}>
-                      <FaRegTrashAlt className="text-xl text-red-600" />
+                      <FaRegTrashAlt className="activeButton text-xl text-red-600" />
                     </button>
                   </div>
                 );
@@ -104,14 +108,14 @@ const Cart = forwardRef(({ closeCart }, ref) => {
             </h4>
             <button
               onClick={ShowMessage}
-              className="rounded-md  bg-[#00A9FF] px-2 text-white shadow-sm"
+              className="activeButton rounded-md bg-[#00A9FF] px-2 text-white shadow-sm"
             >
               Check out
             </button>
           </div>
 
           <button
-            className={`absolute right-0 top-0 rounded-sm bg-[#00A9FF] text-2xl text-white shadow-md  xs:text-2xl`}
+            className={` absolute right-0 top-0 rounded-sm bg-[#00A9FF] text-2xl text-white shadow-md  xs:text-2xl`}
             onClick={closeCart}
           >
             <FaXmark />

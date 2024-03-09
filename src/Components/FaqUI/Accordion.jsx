@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { IoMdArrowDropup } from "react-icons/io";
 
 export default function Accordion({ question, answer, questionNumber }) {
   const [showAccordion, setShowAccordion] = useState(false);
@@ -17,15 +18,13 @@ export default function Accordion({ question, answer, questionNumber }) {
         <h4>
           Q{questionNumber + 1}. {question}
         </h4>
-        <span
-          className={`text-2xl transition-all duration-[400ms] ${showAccordion ? "rotate-[-180deg]" : ""}  sm:text-3xl`}
-        >
-          <IoMdArrowDropdown />
+        <span className="text-2xl transition-all    sm:text-3xl">
+          {showAccordion ? <IoMdArrowDropup /> : <IoMdArrowDropdown />}
         </span>
       </div>
 
       <div
-        className={`paragraphFont  grid ${showAccordion ? "grid-rows-[1fr]" : "grid-rows-[0fr]"} transition-all duration-[400ms]`}
+        className={`paragraphFont  grid ${showAccordion ? " grid-rows-[1fr]" : "grid-rows-[0fr]"} transition-all duration-[400ms]`}
       >
         <div className="normalFont mt-1 overflow-hidden px-1 capitalize">
           <p>{answer}</p>

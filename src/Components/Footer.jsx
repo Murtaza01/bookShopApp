@@ -37,9 +37,11 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <p className="text-lg">
-        Made With <FaHeart className="mx-1 inline text-xl text-red-600" /> to
-        All My Colleagues
+      <p className="text-lg capitalize">
+        all copyRights @ goes to{" "}
+        <span className="secondaryFont text-xl font-semibold italic text-[#00A9FF] ">
+          Birdman.
+        </span>{" "}
       </p>
     </footer>
   );

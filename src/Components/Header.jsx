@@ -44,7 +44,7 @@ export default function Header() {
               <img src={openBook} alt="" className="w-[70px] " />
             </span>
           </a>
-          <a href="#" onClick={openCart}>
+          <a href="#" onClick={openCart} className="activeButton">
             <span className="center headingFont gap-4 rounded-sm border-[1px] border-black/50 px-3 py-1 shadow-sm ">
               {" "}
               Cart ({items.length})

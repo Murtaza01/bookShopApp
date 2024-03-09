@@ -30,6 +30,10 @@ import make_it_stick from "../images/books/make_it_stick.jpg";
 import the_god_that_failed from "../images/books/the_god_that_failed.jpg";
 import up_at_the_villa from "../images/books/up_at_the_villa.jpg";
 import the_last_battle from "../images/books/the_last_battle.jpg";
+import the_old_man_and_the_sea from "../images/books/the_old_man_and_the_sea.jpg";
+import seriously_im_kidding from "../images/books/seriously_im_kidding.jpg";
+import clash_of_kings from "../images/books/clash_of_kings.jpg";
+import granada_trilogy from "../images/books/granada_trilogy.jpg";
 
 const booksData = [
   {
@@ -107,6 +111,7 @@ const booksData = [
   //   lendable: true,
   //   exchangeable: true,
   // },
+
   {
     id: id(),
     name: "The Last Battle",
@@ -153,7 +158,21 @@ const booksData = [
     lendable: true,
     exchangeable: true,
   },
-
+  {
+    id: id(),
+    name: "the old man and the sea",
+    user: "Mais",
+    email: "",
+    price: 6,
+    year: "1952",
+    author: "Ernest Hemingway",
+    genre: "fiction",
+    image: the_old_man_and_the_sea,
+    description:
+      "This short novel, already a modern classic, is the superbly told, tragic story of a Cuban fisherman in the Gulf Stream and the giant Marlin he kills and loses—specifically referred to in the citation accompanying the author's Nobel Prize for literature in 1954.",
+    lendable: false,
+    exchangeable: false,
+  },
   {
     id: id(),
     name: "Letters of Wolfgang Amadeus Mozart",
@@ -229,7 +248,21 @@ const booksData = [
     lendable: true,
     exchangeable: true,
   },
-
+  {
+    id: id(),
+    name: "Seriously... I'm Kidding",
+    user: "Mais",
+    email: "",
+    price: 5,
+    year: "2011",
+    author: "Ellen DeGeneres",
+    genre: "biography",
+    image: seriously_im_kidding,
+    description:
+      "Sometimes the greatest things are the most embarrassing. Ellen Degeneres' winning, upbeat candor has made her show one of the most popular, resilient and honored daytime shows on the air. (To date, it has won no fewer than 31 Emmys.)",
+    lendable: false,
+    exchangeable: false,
+  },
   {
     id: id(),
     name: "Little Women",
@@ -381,6 +414,21 @@ const booksData = [
   },
   {
     id: id(),
+    name: "A Clash of Kings",
+    user: "Mais",
+    email: "",
+    price: 8,
+    year: "1998",
+    author: "George R.R. Martin",
+    genre: "fiction",
+    image: clash_of_kings,
+    description:
+      "A comet the color of blood and flame cuts across the sky. Two great leaders—Lord Eddard Stark and Robert Baratheon—who hold sway over an age of enforced peace are dead, victims of royal treachery. Now, from the ancient citadel of Dragonstone to the forbidding shores of Winterfell, chaos reigns. Six factions struggle for control of a divided land and the Iron Throne of the Seven Kingdoms, preparing to stake their claims through tempest, turmoil, and war.",
+    lendable: false,
+    exchangeable: false,
+  },
+  {
+    id: id(),
     name: "Learn Python 3 the Hard Way simple introduction",
     user: "Aws",
     email: "",
@@ -480,7 +528,22 @@ const booksData = [
     lendable: true,
     exchangeable: true,
   },
-
+  {
+    id: id(),
+    name: "ثلاثية غرناطة",
+    user: "Mariam",
+    email: "",
+    price: 4.5,
+    year: "2003",
+    author: "رضوي عاشور",
+    language: "Arabic",
+    genre: "fiction",
+    image: granada_trilogy,
+    description:
+      " تدور الأحداث في مملكة غرناطة بعد سقوط جميع الممالك الإسلامية في الأندلس، وتبدأ أحداث الثلاثية في عام 1491 وهو العام الذي سقطت فيه غرناطة بإعلان المعاهدة التي تنازل بمقتضاها أبو عبد الله محمد الصغير آخر ملوك غرناطة عن ملكه لملكي قشتالة وأراجون وتنتهى بمخالفة آخر أبطالها الأحياء عليّ لقرار ترحيل المسلمين حينما يكتشف أن الموت في الرحيل عن الأندلس وليس في البقاء",
+    lendable: true,
+    exchangeable: true,
+  },
   {
     id: id(),
     name: "الكتاب الاحمر",

@@ -45,7 +45,8 @@ const userData = [
     id: id(),
     name: "Mais",
     image: mais,
-    description: "",
+    description:
+      "Just an introvert who likes to live in a world of imagination ",
   },
 ];
 

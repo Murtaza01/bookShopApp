@@ -14,6 +14,9 @@ import { FaRegTrashAlt } from "react-icons/fa";
 const messages = [
   "this functionality doesn't work",
   "clicking the button again  won't help",
+  "i bet you are fun at parties",
+  "really? what do you think will happen ?",
+  "your parents must be really proud of you",
 ];
 
 let i = 0;
@@ -35,7 +38,7 @@ const Cart = forwardRef(({ closeCart }, ref) => {
 
     setTimeout(() => {
       setNotify(false);
-    }, 3000);
+    }, 2000);
   }
 
   function removeItem(index, price) {
@@ -53,7 +56,6 @@ const Cart = forwardRef(({ closeCart }, ref) => {
       open() {
         dialog.current.showModal();
         setAnimation((prev) => !prev);
-
         document.querySelector("body").style.overflowY = "hidden";
       },
     };
